@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    somedb:
+      jdbc-url: jdbc:mysql://localhost:3306/somedb?useUnicode=yes&characterEncoding=UTF-8
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: someuser
+      password: somepassword
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+    generate-ddl: true
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
