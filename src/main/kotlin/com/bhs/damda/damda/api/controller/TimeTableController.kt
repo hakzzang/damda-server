@@ -5,7 +5,7 @@ import com.bhs.damda.damda.domain.RoomSaveRequestDto
 import org.springframework.web.bind.annotation.*
 
 @RestController
-class HelloController(val roomRepository: RoomRepository) {
+class TimeTableController(val roomRepository: RoomRepository) {
     @GetMapping(value = ["/hello"])
     @ResponseBody
     fun getHello(): String {
